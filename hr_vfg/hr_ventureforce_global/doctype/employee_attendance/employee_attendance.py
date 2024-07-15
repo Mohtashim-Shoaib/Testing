@@ -14,17 +14,17 @@ import datetime as special
 import time
 from frappe.utils import cstr, flt,getdate, today, get_time
 import calendar
-from hrms.hr.doctype.employee.employee import (
-	InactiveEmployeeStatusError,
-	get_holiday_list_for_employee,
+from hrms.hr.utils import get_holidays_for_employee
+from erpnext.setup.doctype.employee.employee import get_holiday_list_for_employee
+from erpnext.setup.doctype.employee.employee import (
+    InactiveEmployeeStatusError
 )
-
 
 class EmployeeAttendance(Document):
     def autoname(self):
         self.name = make_autoname(self.employee + '-' + self.month)
 
-    def validate(self):   
+    def validate(self):
         total_early = 0
         total_lates = 0
         total_half_days = 0
