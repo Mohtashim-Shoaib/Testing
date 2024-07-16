@@ -20,6 +20,7 @@ from erpnext.setup.doctype.employee.employee import (
     InactiveEmployeeStatusError
 )
 
+
 class EmployeeAttendance(Document):
     def autoname(self):
         self.name = make_autoname(self.employee + '-' + self.month)
