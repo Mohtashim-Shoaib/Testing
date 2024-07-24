@@ -10,6 +10,7 @@
   "month",
   "email_id",
   "unit",
+  "joining_date",
   "column_break_3",
   "employee_name",
   "year",
@@ -395,11 +396,17 @@
    "fieldname": "total_extra_duty_for_fullday",
    "fieldtype": "Float",
    "label": "Total Extra Duty for Fullday"
+  },
+  {
+   "fetch_from": "employee.date_of_joining",
+   "fieldname": "joining_date",
+   "fieldtype": "Data",
+   "label": "Joining Date"
   }
  ],
  "hide_toolbar": 1,
  "links": [],
- "modified": "2024-07-01 14:23:55.585485",
+ "modified": "2024-07-24 17:50:43.774269",
  "modified_by": "Administrator",
  "module": "HR VentureForce Global",
  "name": "Employee Attendance",
